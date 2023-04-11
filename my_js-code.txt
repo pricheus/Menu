@@ -106,7 +106,9 @@ buttons.forEach(function(buttons){
         displayMenuItems(menu)
       } else {
         displayMenuItems(category)
-      }     
+      }
+     
+      
     }
 })
 
