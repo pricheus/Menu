@@ -10,37 +10,36 @@
 </head>
 <body>
     
-
-    <menu>
-        <section id="titleAndOptions">
-        <div class="title">
+    <div>
+        <div id="title">
             <h1>Our Menu</h1>
-            <span id="borderBottom"></span>
+            <span id="border_bottom"></span>
         </div>
-        <div class="buttonsContainers">
-            <button class="allButton" type="button" data-id="all">All</button>
-            <button class="BreakfastButton" type="button" data-id="breakfast">Breakfast</button>
-            <button class="LunchButton" type="button" data-id="lunch">Lunch</button>
-            <button class="ShakesButton" type="button" data-id="shakes">Shakes</button>
-            <button class="DinnerButton" type="button" data-id="dinner">Dinner</button>
+
+        <div class="buttonsContainer">
+            <button class="all" data-id="all">All</button>
+            <button class="breakfast" data-id="breakfast">Breakfast</button>
+            <button class="lunch" data-id="lunch">Lunch</button>
+            <button class="shakes" data-id="shakes">Shakes</button>
+            <button class="dinner" data-id="dinner">Dinner</button>
         </div>
-    </section>
 
-    <div class="mealContainers">
-         <section class="menuItems">
-            <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg
-            " alt=""></img>
-            <h4 id="mealName">Buttermilk Pancakes <span id="price">$15.99</span></h4>
-            <span id="borderBottomMenu"></span>
-            <p>I'm baby woke mlkshk wolf bitters live-edge blue bottle, <br>
-                 hammock freegan copper mug whatever cold-pressed</p>
-        </section>
-
+        <menu class="mealContainer">
+            <section class="mealItems">
+                <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg" alt="Buttermilk Pancakes">
+                <aside>
+                    <h4>Buttermilk Pancakes <span id="price">$15.99</span></h4>
+                    <span id="dotted_border"></span>
+                    <p>
+                        I'm baby woke mlkshk wolf bitters live-edge blue <br>
+                         bottle, hammock freegan copper mug whatever <br>
+                         cold-pressed
+                    </p>
+                </aside>
+            </section>
+        </menu>
     </div>
-       
-        
-
-    </menu>
+   
     <script src="menu.js"></script>
 </body>
 </html>

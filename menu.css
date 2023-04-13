@@ -7,70 +7,65 @@
 body{
     font-size: 1.25rem;
     font-family: 'Open Sans', sans-serif;
-    background-color:hsl(210, 36%, 96%);
+    background-color: hsl(210, 36%, 96%);
     color: #222;
-    padding: 2rem;
-
 }
 
-/* First part*/
-#titleAndOptions{
+#title{
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    letter-spacing: 0.5ch; 
-    
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    margin-top: 3ch;
+    margin-bottom: 3ch;
+    letter-spacing: 0.5ch;
 }
 
-#borderBottom{
-    margin:1.25ch 0;
+#border_bottom{
     display: flex;
-    width: 50%;
-    height: 0.4ch;
-    background-color: #c59d5f;
-    margin-left: 25%;
-    
+    background-color: #C59D5F;
+    width:10%;
+    height: 5px;
+    margin-top: 1ch;
+}
+
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
 }
 
 button{
-background-color: inherit;
-color: #c59d5f;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 1.1rem;
-border-radius: 9px;
-border-top: 2px solid #c59d5f;
-border-left: 2px solid #c59d5f;
-height: 3ch;
-cursor: pointer;
-transition-duration: 0.25s;
-transition-timing-function: ease-in;
-margin: 0 0.75ch;
+    width: auto;
+    height: 3.5ch;
+    background-color: inherit;
+    color: #C59D5F;
+    border-top: 2px solid #C59D5F;
+    border-left: 2px solid #C59D5F;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: large;
+    margin: 2ch 1ch;
 }
 
-button:hover{
-background-color: #c59d5f;
-color: #fff;
+.all{
+    width: 4ch;
 }
 
-.allButton{
- width: 5ch;
+.breakfast{
+    width: 10ch;
 }
 
-.BreakfastButton{
-    width: 11ch;
-}
-.LunchButton{
+.lunch{
     width: 7ch;
 }
 
-.ShakesButton{
-    width: 8ch;
-}
-.DinnerButton{
+.shakes{
     width: 7ch;
 }
 
-/* Second part*/
+.dinner{
+    width: 7ch;
+}
 
 menu{
     display: flex;
@@ -78,29 +73,34 @@ menu{
     justify-content: center;
     align-items: center;
 }
-
-#borderBottomMenu{
-    margin:1.25ch 0;
+.mealItems{
     display: flex;
-    width: 100%;
-    height: 0.5px;
-   
-    border-bottom: dotted;
+    margin-bottom: 2ch;
     
 }
 
-.mealContainers{
-    margin: 2ch 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: fel;
+aside{
+    padding-left: 2ch;
 }
 
+h4{
+    text-transform: capitalize;
+}
 img{
-    width: 400px;
-    height: 200px;
-    border-radius: 9px;
-    background-color: #c59d5f;
-    border: 3px solid #c59d5f;
+    width: 270px;
+    height: 180px;
     object-fit: cover;
+    border: 3px solid #C59D5F;
+    border-radius: 9px;
+}
+
+
+#price{
+    color: #C59D5F;
+}
+#dotted_border{
+    display: flex;
+border-bottom: 1px solid #222;
+border-bottom: dotted;
+margin: 2ch 0;
 }
