@@ -47,6 +47,11 @@ button{
     margin: 2ch 1ch;
 }
 
+button:hover{
+    background-color: #C59D5F;
+    color: #fff;
+}
+
 .all{
     width: 4ch;
 }

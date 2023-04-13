@@ -91,30 +91,42 @@ const buttons = document.querySelectorAll('button');
 
 
 //render content dynamically
-window.addEventListener('DOMContentLoaded',function(){
-const tag=  menu.map(displayMenu).join("");
-  mealContainers.innerHTML =tag
-})
+window.addEventListener('DOMContentLoaded', displayMenu(menu) )
 
-
-function displayMenu(menu){
+function displayMenu(items){
+const tag=  items.map(function (menuItems){
   return `<section class="mealItems">
-  <img src=${menu.img} alt=${menu.title}>
+  <img src=${menuItems.img} alt=${menuItems.title}>
   <aside>
-      <h4>${menu.title} <span id="price">${menu.price}</span></h4>
+      <h4>${menuItems.title} <span id="price">${menuItems.price}</span></h4>
       <span id="dotted_border"></span>
       <p>
-      ${menu.desc}
+      ${menuItems.desc}
       </p>
   </aside>
 </section>`
+}).join("");
+  mealContainers.innerHTML = tag
 }
+
 //filtering functionnality
 
 buttons.forEach(function(btn){
   btn.onclick = function(e){
-    const currentBtnCategory =  e.currentTarget.dataset.id;
-    console.log(currentBtnCategory)
+    const currentBtn =  e.currentTarget.dataset.id;
+    const filterOption = menu.filter(function(menuItem){
+      if(menuItem.category === currentBtn){
+        return menuItem
+      }
+    });
+
+    if(currentBtn === 'all'){
+      displayMenu(menu);
+    } else {
+      displayMenu(filterOption);
+    
+    }
+    
   }
 })
 
