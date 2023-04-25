@@ -6,40 +6,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu</title>
+    <title> Menu</title>
 </head>
 <body>
-    
-    <div>
-        <div id="title">
-            <h1>Our Menu</h1>
-            <span id="border_bottom"></span>
-        </div>
+   <!--title and filter buttons-->
 
-        <div class="buttonsContainer">
-            <button class="all" data-id="all">All</button>
-            <button class="breakfast" data-id="breakfast">Breakfast</button>
-            <button class="lunch" data-id="lunch">Lunch</button>
-            <button class="shakes" data-id="shakes">Shakes</button>
-            <button class="dinner" data-id="dinner">Dinner</button>
-        </div>
+   <header>
+    <section id="title">
+        <h1>Our Menu</h1>
+        <span id="borberBottom"></span>
+    </section>
 
-        <menu class="mealContainer">
-            <section class="mealItems">
-                <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg" alt="Buttermilk Pancakes">
-                <aside>
-                    <h4>Buttermilk Pancakes <span id="price">$15.99</span></h4>
-                    <span id="dotted_border"></span>
-                    <p>
-                        I'm baby woke mlkshk wolf bitters live-edge blue <br>
-                         bottle, hammock freegan copper mug whatever <br>
-                         cold-pressed
-                    </p>
-                </aside>
-            </section>
-        </menu>
-    </div>
+    <section id="btnContainers">
+        <button class="btnAll" type="button" data-id="all">All</button>
+        <button class="btnBreakfast" type="button" data-id="breakfast">Breakfast</button>
+        <button class="btnLunch" type="button" data-id="lunch">Lunch</button>
+        <button class="btnShakes" type="button" data-id="shakes">Shakes</button>
+        <button class="btnDinner" type="button" data-id="dinner">Dinner</button>
+    </section>
+   </header>
+
+   <!--actual menu-->
+   <menu>
+    <section class="mealContainer">
+        <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg" alt="">
+        <aside>
+            <h4 class="mealName">Buttermilk Pancakes <span class="mealPrice">$15.99</span></h4> 
+            <span class="underline"></span>
+            <p class="mealDescription">
+                I'm baby woke mlkshk wolf bitters live-edge blue <br>
+                 bottle, hammock freegan copper mug whatever <br>
+                 cold-pressed  
+            </p>
+        </aside>
+    </section>
+
+
+   </menu>
    
+
+   <!--JavaScript link -->
     <script src="menu.js"></script>
 </body>
 </html>

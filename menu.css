@@ -5,107 +5,117 @@
 }
 
 body{
-    font-size: 1.25rem;
-    font-family: 'Open Sans', sans-serif;
+    font: 1.25rem "Roboto", sans-serif;
     background-color: hsl(210, 36%, 96%);
     color: #222;
 }
 
-#title{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    align-items: center;
-    margin-top: 3ch;
-    margin-bottom: 3ch;
-    letter-spacing: 0.5ch;
-}
-
-#border_bottom{
-    display: flex;
-    background-color: #C59D5F;
-    width:10%;
-    height: 5px;
-    margin-top: 1ch;
-}
-
-.buttonsContainer{
+header{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5ch;
+}
+
+h1{
+    font-size: 48px;
+    letter-spacing: 0.25ch;
+}
+
+#borberBottom{
+    display: flex;
+    background-color: #C59D5F;
+    width: 50%;
+    height: 7px;
+    margin-left:4.5ch;
+    margin-top: 0.5ch;
+    margin-bottom: 2ch;
+    
 }
 
 button{
-    width: auto;
-    height: 3.5ch;
-    background-color: inherit;
-    color: #C59D5F;
-    border-top: 2px solid #C59D5F;
-    border-left: 2px solid #C59D5F;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: large;
-    margin: 2ch 1ch;
+cursor: pointer;
+font: 1rem large arial;
+background-color: inherit;
+border-left: 2px solid #C59D5F;
+border-top: #C59D5F 2px solid;
+border-radius: 9px;
+color: #C59D5F;
+height: 3.25ch;
+margin: 0 0.5ch;
 }
 
 button:hover{
     background-color: #C59D5F;
     color: #fff;
+    transition-timing-function: ease-in;
+    transition-duration: 0.15s;
 }
 
-.all{
+.btnAll{
     width: 4ch;
 }
 
-.breakfast{
-    width: 10ch;
+.btnBreakfast{
+    width: 9ch;
 }
 
-.lunch{
+.btnLunch{
+    width: 6.25ch;
+}
+
+.btnShakes{
     width: 7ch;
 }
 
-.shakes{
-    width: 7ch;
+.btnDinner{
+    width: 6.9ch;
 }
 
-.dinner{
-    width: 7ch;
-}
+
+
+/* menuItems*/
 
 menu{
+    margin-top: 4ch;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-.mealItems{
+
+.mealContainer{
     display: flex;
-    margin-bottom: 2ch;
-    
+    margin-top: 2ch;
+    margin-left: 2ch;
+}
+
+img{
+    width: 25ch;
+    height: 17ch;
+    border-radius: 9px;
+    border: 5px solid #C59D5F;
+    margin-right: 1ch;
+   
 }
 
 aside{
-    padding-left: 2ch;
+    margin-left: 1ch;
 }
 
-h4{
-    text-transform: capitalize;
-}
-img{
-    width: 270px;
-    height: 180px;
-    object-fit: cover;
-    border: 3px solid #C59D5F;
-    border-radius: 9px;
-}
-
-
-#price{
+.mealPrice{
+    float: right;
     color: #C59D5F;
 }
-#dotted_border{
+
+.mealName{
+    text-transform: capitalize;
+}
+
+.underline{
     display: flex;
-border-bottom: 1px solid #222;
-border-bottom: dotted;
-margin: 2ch 0;
+    border: 1px solid #222;
+    border-style: dotted;
+    margin: 1ch 0;
 }

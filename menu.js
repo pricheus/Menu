@@ -84,49 +84,42 @@ const menu = [
   },
 ];
 
-//interactive elements
-const mealContainers = document.querySelector('.mealContainer');
-const buttons = document.querySelectorAll('button');
+// interactive elemts
+const menuItem = document.querySelector('menu');
+const buttons = document.querySelectorAll('button')
 
+//event listener
+window.addEventListener('DOMContentLoaded',displayMenu(menu) );
 
-
-//render content dynamically
-window.addEventListener('DOMContentLoaded', displayMenu(menu) )
-
-function displayMenu(items){
-const tag=  items.map(function (menuItems){
-  return `<section class="mealItems">
-  <img src=${menuItems.img} alt=${menuItems.title}>
+function displayMenu(menu){
+  const menuItems = menu.map(function(menu){
+      return `<section class="mealContainer">
+  <img src=${menu.img} alt=${menu.title}>
   <aside>
-      <h4>${menuItems.title} <span id="price">${menuItems.price}</span></h4>
-      <span id="dotted_border"></span>
-      <p>
-      ${menuItems.desc}
+      <h4 class="mealName">${menu.title} <span class="mealPrice">${menu.price}</span></h4> 
+      <span class="underline"></span>
+      <p class="mealDescription">
+          ${menu.desc}
       </p>
   </aside>
 </section>`
-}).join("");
-  mealContainers.innerHTML = tag
-}
+  }).join('')
 
-//filtering functionnality
+  menuItem.innerHTML = menuItems
+};
 
+//filtering option
 buttons.forEach(function(btn){
   btn.onclick = function(e){
-    const currentBtn =  e.currentTarget.dataset.id;
-    const filterOption = menu.filter(function(menuItem){
-      if(menuItem.category === currentBtn){
-        return menuItem
-      }
+    const btnCategory = e.currentTarget.dataset.id;
+    const filter_func = menu.filter(function(menuElement){
+      if(btnCategory === menuElement.category){
+            return menuElement
+          }
     });
-
-    if(currentBtn === 'all'){
-      displayMenu(menu);
-    } else {
-      displayMenu(filterOption);
-    
-    }
-    
+   if(btnCategory === 'all'){
+    displayMenu(menu)
+   } else{ displayMenu(filter_func)}
   }
 })
 
