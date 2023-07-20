@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="menu.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Menu</title>
-</head>
-<body>
-   <!--title and filter buttons-->
+  <head>
+    <link rel="stylesheet" href="menu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <!--title and filter buttons-->
 
-   <header>
-    <section id="title">
-        <h1>Our Menu</h1>
-        <span id="borberBottom"></span>
-    </section>
+    <header>
+      <section class="title">
+        <h2>Our Menu</h2>
+        <span class="borderBotom"></span>
+      </section>
 
-    <section id="btnContainers">
-        <button class="btnAll" type="button" data-id="all">All</button>
-        <button class="btnBreakfast" type="button" data-id="breakfast">Breakfast</button>
-        <button class="btnLunch" type="button" data-id="lunch">Lunch</button>
-        <button class="btnShakes" type="button" data-id="shakes">Shakes</button>
-        <button class="btnDinner" type="button" data-id="dinner">Dinner</button>
-    </section>
-   </header>
+      <!--btns a rendered dynamically inside of the container-->
+      <section class="btnContainers"></section>
+    </header>
 
-   <!--actual menu-->
-   <menu>
-    <section class="mealContainer">
-        <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg" alt="">
-        <aside>
-            <h4 class="mealName">Buttermilk Pancakes <span class="mealPrice">$15.99</span></h4> 
-            <span class="underline"></span>
-            <p class="mealDescription">
-                I'm baby woke mlkshk wolf bitters live-edge blue <br>
-                 bottle, hammock freegan copper mug whatever <br>
-                 cold-pressed  
-            </p>
-        </aside>
-    </section>
+    <!--actual menu-->
+    <menu>
+      <!--menu items dynamically added from js-->
+    </menu>
 
-
-   </menu>
-   
-
-   <!--JavaScript link -->
+    <!--JavaScript link -->
     <script src="menu.js"></script>
-</body>
+  </body>
 </html>
