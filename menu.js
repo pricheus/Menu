@@ -1,5 +1,5 @@
 //items list
-const menu = [
+const menuList = [
   {
     id: 1,
     title: "buttermilk pancakes",
@@ -7,7 +7,7 @@ const menu = [
     price: 15.99,
     img: "https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg",
     desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, 
-    hammock freegan copper mug whatever
+        hammock freegan copper mug whatever
      cold-pressed `,
   },
   {
@@ -84,42 +84,54 @@ const menu = [
   },
 ];
 
-// interactive elemts
-const menuItem = document.querySelector('menu');
-const buttons = document.querySelectorAll('button')
+//1-menu
+const menu = document.querySelector("menu");
 
-//event listener
-window.addEventListener('DOMContentLoaded',displayMenu(menu) );
+window.addEventListener("DOMContentLoaded", displayMenu(menuList));
+function displayMenu(menuList) {
+  let renderMenu = menuList.map(function (menuItem) {
+    return `<section class="mealContainer">
+        <img
+          src=${menuItem.img}
+          alt="${menuItem.title}"
+        />
+        <aside>
+          <h4 class="${menuItem.category}">${menuItem.title} <span class="mealPrice">${menuItem.price}</span></h4>
+          <span class="underline"></span>
+          <p>
+            ${menuItem.desc}
+          </p>
+        </aside>
+      </section>`;
+  });
+  menu.innerHTML = renderMenu.join("");
+}
 
-function displayMenu(menu){
-  const menuItems = menu.map(function(menu){
-      return `<section class="mealContainer">
-  <img src=${menu.img} alt=${menu.title}>
-  <aside>
-      <h4 class="mealName">${menu.title} <span class="mealPrice">${menu.price}</span></h4> 
-      <span class="underline"></span>
-      <p class="mealDescription">
-          ${menu.desc}
-      </p>
-  </aside>
-</section>`
-  }).join('')
+//3-btns
+const btnContainer = document.querySelector(".btnContainers");
 
-  menuItem.innerHTML = menuItems
-};
+// const renderBtns = menuList.map(function (btn) {
+//   return `<button class="${btn.category}" data-id="${btn.category}">${btn.category}</button>`;
+// });
 
-//filtering option
-buttons.forEach(function(btn){
-  btn.onclick = function(e){
-    const btnCategory = e.currentTarget.dataset.id;
-    const filter_func = menu.filter(function(menuElement){
-      if(btnCategory === menuElement.category){
-            return menuElement
-          }
+// btnContainer.innerHTML = renderBtns.join("");
+
+//2-filtering functionnality on btns
+const btns = document.querySelectorAll("button");
+
+btns.forEach(function (btn) {
+  btn.onclick = function (e) {
+    const data_id = e.currentTarget.dataset.id;
+
+    const filter = menuList.filter(function (item) {
+      if (item.category === data_id) {
+        return item;
+      }
     });
-   if(btnCategory === 'all'){
-    displayMenu(menu)
-   } else{ displayMenu(filter_func)}
-  }
-})
-
+    if (data_id === "all") {
+      displayMenu(menuList);
+    } else {
+      displayMenu(filter);
+    }
+  };
+});
